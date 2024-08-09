@@ -1,13 +1,18 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import MoviesPage from "./pages/MoviesPage/MoviesPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 
 function App() {
   return (
     <div>
+      <Navigation />
       <Routes>
-        <Route pash="/" element={<h1>Home page</h1>} />
-        <Route pash="/about" element={<h1>About page</h1>} />
-        <Route pash="*" element={<h1>Not found</h1>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

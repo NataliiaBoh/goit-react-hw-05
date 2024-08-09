@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.navLink {
+  color: black;
+}
+.active {
+  color: red;
+}
